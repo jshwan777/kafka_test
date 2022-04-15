@@ -22,7 +22,9 @@ public class TestController {
 		LocalDateTime date = LocalDateTime.now();
 		String dateStr = date.format(fmt);
 		
-		kafkaTemplate.send("testtopic",dateStr+"	"+message);
+		for(int i=0; i<20;i++){
+			kafkaTemplate.send("testtopic",dateStr+"	"+message+i);
+		}
 		
 		return "kafkaTemplate.send >> "+message;
 	}

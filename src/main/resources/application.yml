@@ -1,0 +1,17 @@
+bootstrap:
+  servers: localhost:9092
+  retrise: 0
+  batch:
+    size: 4096
+  linger:
+    ms: 1
+  buffer:
+     memory: 40960
+     
+server:
+  port: 8080
+Spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
